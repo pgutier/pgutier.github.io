@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	width: 70%;
+	color: black;
+	letter-spacing: .1em;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
+	margin-bottom: 20em;
+}
+
+p.inside {
+	/* This is a class. It allows me to select certain <p> tags and change them without changing the other <p> tags.
+	Look below in the html and you will see <p class="inside">. That applies this css to only the <p> tags with that class. In this case I am making the text white. Otherwise as you can see in the body css that the color is black for all text in the body.*/
+	color: white;
+	line-height: 1.2em;
+	letter-spacing: .1em;
+}
+				
+div {
+	background-color: lightblue;
+	height: auto;
+	width: 60%;
+	padding: .5em;
+}
+
+#fixed {
+	background-color: tomato;
+	height: auto;
+	width: 70%;
+	position: fixed;
+	padding: .5em;
+	left: 15em;
+	top: 15em;
+	overflow: visible;
+	z-index: 99999;
+		/*
+The Z-index allows you to move an element to on top or below another element. The higher the number, the closer the element is to the front/top. It is like the bring to front or sent to back in most layout programs. It can be used on text tags too, like h1 or p. Think of it as a way of layering.
+	*/
+	opacity: 0.8;
+}
+	
+nav {
+	overflow: hidden;
+	height: 30px;
+	padding: .5em;
+	background-color: darkgrey;
+	width: 50%;
+	top: 25em;
+}
+
+nav:hover {
+	overflow: visible;
+	height: 200px;
+	width: 50%;
+	padding: .5em;
+	top: 25em;
+	background-color: darkgrey;
+	-webkit-transition: height .05s; /* Safari */
+	-webkit-transition-timing-function: linear; /* Safari */
+	transition: height .05s;
+	transition-timing-function: linear;
+}
+	
+#nav_test {
+	overflow: hidden;
+	height: 30px;
+	padding: .5em;
+	background-color: darkgrey;
+	width: 50%;
+	top: 25em;
+}
+
+#nav_test:hover {
+	overflow: visible;
+	height: 250px;
+	width: 50%;
+	padding: .5em;
+	top: 25em;
+	background-color: darkgrey;
+	-webkit-transition: height .05s; /* Safari */
+	-webkit-transition-timing-function: linear; /* Safari */
+	transition: height .05s;
+	transition-timing-function: linear;
+}
+	
+#absolute {
+	background-color: seagreen;
+	height: auto;
+	width: 50%;
+	position: absolute;
+	padding: .5em;
+	left: 25em;
+	overflow: visible;
+	top: 40em;
+}
+
+</style>
+
+<title>The DIV tag</title>
+
+</head>
+
+<body>
+
+<h1>How to compose elements on a page</h1>
+
+<p> Below are some examples of various useful position settings for composing elements on pages. Open the code and have a look at how it is done.
+</p>
+
+<p>A &lt;div&gt; tag is useful for making a generic container that can be styled and composed on a page. Think of it as a box that you can put other elements inside and move around. It has no semantic value.
+</p>
+
+<p>
+Whenever possible one should use actual semantic html tags (tags that are representative of the meaning they envelope) for content instead of a div tag.</p>
+ 
+<p>Read about &lt;article&gt; and &lt;aside&gt; tags. This is a good reference for tag descriptions and proper use. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article</a>
+
+<p>Search engines will better catalog your website if the content is semantically tagged.</p>
+
+<p>You will also see a &lt;nav&gt; tag on this page. This is the tag used for navigation. I have provided a useful hover effect, which expands the size of the box revealing more informaiton.</p>
+
+<div>
+<p class="inside">
+This div is not styled, also known as static positioning. It goes with the flow of all the other content. It sits where it is written in the code.
+</p>
+</div>
+
+<div id="fixed">
+<p class="inside">
+Fixed positioning is a type of absolute positioning that requires the position property to have a value of fixed. It stays in place when the user scrolls down the page.
+</p>
+</div>
+
+<nav>
+<p class="inside">
+This nav has a pseudo class applied to it, which allows it to expand when it is <br> <br> rolled over.
+</p>
+</nav>
+
+<div>
+<p class="inside">
+This div is not styled, also known as static positioning. It goes with the flow of all the other content. It sits where it is written in the code.
+</p>
+</div>
+
+<div id="absolute">
+<p class="inside">
+Absolute positioning takes something out of the normal document flow and it no longer affects the position of other elements on the page. The other elements on the page ignore it. The box offset properties (top, bottom, left, and right) specify where the element should appear in relation to its container.
+</p>
+</div>
+
+<div id="nav_test">
+<img id="test_image" src="images/gold_table.jpg" alt="Gold Table"/>
+<!--<p class="inside">
+This nav has a pseudo class applied to it, which allows it to expand when it is <br> <br> rolled over.
+</p>-->
+</div>
+
+</body>
+
+</html>

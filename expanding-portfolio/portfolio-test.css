@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	width: 70%;
+	margin-left: 15%;
+	color: black;
+	letter-spacing: .1em;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
+	margin-bottom: 20em;	
+}
+
+h1 {
+	margin-bottom: 50px;
+}
+
+.exp_test {
+	overflow: hidden;
+	height: 200px;
+	/*padding: .5em;*/
+	background-color: darkgrey;
+	width: 40%;
+	/*top: 25em;*/
+	/*position: relative;*/
+	display: inline-block;
+	z-index: 10;
+}
+
+.exp_test:hover {
+	overflow: visible;
+	height: 200px;
+	width: 40%;
+	/*padding: 1em;*/
+	top: 25em;
+	/*background-color: darkgrey;*/
+	-webkit-transition: height .05s; /* Safari */
+	-webkit-transition-timing-function: linear; /* Safari */
+	transition: height .05s;
+	transition-timing-function: linear;
+	display: inline-block;
+	/*position: relative;*/
+	/*z-index: 55555 !important;*/
+}
+
+.exp_test:hover img{
+	position: relative;
+z-index: 55555 !important;
+}
