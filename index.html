@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"><head> 
+<!-- contains information such as title, meta information, CSS styles-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Tells the browser to display the page without any special scaling. -->
+
+<meta name="description" content="A basic HTML web page">
+<!--this will be listed after the web page ink in search engine results-->
+
+<meta name="keywords" content="Basic HTML tags, chess in park, how to make coffee">
+<!--tells search engines what kind of content is on this page. this should be a short list of words separated by commas -->
+
+<meta name="author" content="Your Name"><title>A Basic HTML Page</title></head>
+<!--the slash indictates the close of a tag. Most, but not all tags need this for a following next tag to work.-->
+
+<body> 
+<!-- contains all of the visible content of the site-->
+<a id="top">
+<h1> This is a basic HTML page with some of the most common tags</h1></a>
+<!--this is a heading. headings are arranged by size; 1 largest to 6 smallest. the web browers will understand the heirarchy of your content based on these tags. It will display it typographically from larger to smaller to create a clear visual heirarchy.-->
+
+<h2> What is HTML?</h2>
+
+<h3>
+	HTML is an acronym for <em><!--emphasizes text with italics-->hypertext markup language</em>. 
+	</h3>
+	
+	<p>
+	<!--this tag defines a paragraph-->HTML is the language (well, techincally it is only a markup [a way to tag information] and not a language) that is used for making web pages. It is the framwork of web pages. It is structural. It is semantic (meaning-based). It has some basic design inherently built into it. For example. This paragraph is under an &lt;h2&gt;heading tag. That tag and all of the &lt;h1&gt; to &lt;h6&gt; heading tags create visual heirarchy within text. Notice the size waterfall &lt;h1&gt; to &lt;h6&gt; tags below. This allows one to make many sub category headings within text. 
+	<h1>Heading 1 tag</h1>
+	<h2>Heading 2 tag</h2>
+	<h3>Heading 3 tag</h3>
+	<h4>Heading 4 tag</h4>
+	<h5>Heading 5 tag</h5>
+	<h6>Heading 6 tag</h6>
+    <p> This paragraph is written within a &lt;p&gt; tag, which represents the paragraph. Paragraphs can take headings if needed.
+    <p>Browsers interpret HTML and structure pages so they have the intended visual heirarchy that reflects to the sematics (meaning) of the content. HTML also allows search engines to understand what is on the pages so writing correct HTML <strong><!--emphasizes text with bold-->is important</strong>. Without it your work does not fit into the information ecosystem of the web correctly and search engines will not like your website.
+    <p>Pure HTML is inherently responsive (scales with the browser window). As long as you use relative units of measurements (percentages and ems) then you can make simple responsive pages. Percentages are pretty easy to understand. EMs are relative to the brower preferences. If the browser is set to display the body text at 14pt, then one EM is equal to 14pt.
+<p>Later we will learn how to alter the appearance HTML tags with CSS (Cascading Style Sheets). This is where you can make more unique design decisions.
+
+<p>I would like to divide this part of the page from the rest of the page below it so I will draw a line with HTML.
+
+<hr>
+<!--creates a horizontal line to separate content-->
+
+<h3> Here I will make an ordered list.
+Ordered lists are used for things that need numerical squencing.</h3>
+
+<ol>
+<!--this is for an ordered list-->
+	<lh><h4>How to make coffee</h4></lh>
+   <!--this is for a list heading-->
+  <li>Pour coffee</li>
+  <!--this is a list item-->
+  <li>Add milk and sugar</li>
+  <li>Drink</li>
+</ol>
+
+<hr>
+
+<h3> Here I will make an unordered list.
+	Unordered lists are used for things that do not need order. By default the list items appear with bullets. You can later on style them to have other forms.
+	</h3>
+	
+<ul>
+ <!--this is for an unordered list-->
+	<lh><h4>Adventures of hiking</h4></lh>
+  <li>Smelling flowers</li>
+  <li>Seeing animals</li>
+  <li>Exercise</li>
+</ul>
+
+<p><a href="http://www.w3.org/">
+    <!-- establishes a hyperlink-->
+    This is a link to the World Wide Web Consortium.</a> The World Wide Web Consortium W3C is and excellent resource for all things HTML and CSS related. Make this a first go-to in your list of online references. Especially for anything to do with current web standards. I keep it bookmarked.
+<p> The fundamental uniqueness of the medium of the web is hyperlinking within pages, between pages in a site, and to other places on the world wide web.
+    
+<p>Below is an image. This image is contained within this website folder. The code for it is a defined pathway. It looks like this. <em>&lt;img src=&quot;images/web-picture.jpg&quot; alt=&quot;This is a black and white image of a chess game in a park. All of the pieces have fallen over.&quot;/&gt;</em> The &#8220;images&#8221; is a folder within the site folder. The slash represents that the file &quot;web-picture.jpg&quot; is within the images folder. This is important to understand as students often make the mistake of not keeping track of the images they use in their site. All the images in the site should be contained within one images folder and referenced correctly in the code. If the images are not where the code says they are then the pathways are not possibly and images do not show up on pages. Also if images are too big (in terms of file size) then they will not load quickly). Read the comments in the code for more information on images. Comments in HTML are always written in this way <strong> &lt;!--This is a comment. It is not active code It is just notes for other coders to share how things work.--&gt;.</strong> <br>
+  <!--breaks a line of text. Also useful when needing to add a little space between things.-->
+	  
+  <img src="images/web-picture.jpg" alt="This is a black and white image of a chess game in a park. All of the pieces have fallen over."/>
+  <!--This is how you put an image in a page. Notice that it is linked according to this pathway "images/web-picture.jpg". The browers is looking first for the "images" folder and then inside of that it is looking for "web-picture.jpg". If you do not keep this image where it is  defined in the code (in the images folder) it will not appear on the page. The "alt=" description is a description for the users with low vision or those how are blind as they may use screen readers to help them access the content of your webpage. The alt text is readable content for screen readers and it is searchable content for search engines. This image has a file size of 48k, which is small enough to not slow down the loading of the page in a web browers. Keep in mind all of the graphics on your webpage add up and will slow down the transfer from the server to your web browser. Try to keep the each page (html document and all graphic files) under 1mb.-->
+	  
+<hr>
+	<h3> Below is a table. A table is used only to display data. It is not used for layout. </h3>
+	
+<table> 
+  <!-- establishes a table-should be used for table data only-->
+  <tr> 
+<!-- establishes a table heading. A table must have headings for screen readers to understand how to tean them back-->
+<th>Monday</th> 
+<!-- establishes a column heading-->
+<th>Tuesday</th>
+<th>Wednesday</th>
+</tr>
+
+<tr>
+<td>Sunny</td> 
+<!-- establishes a table cell-->
+<td>Snowy</td>
+<td>Windy</td>
+</tr>
+</table>
+
+<hr>
+	<p>  Now you know how to make a simple page of text and tag it correctly in HTML.
+   
+    <p>This is the  end of the page. An anchor will jump within the page  <a href="#top">to the top</a> or some other location. In this example it jumps to the top. You can see at the very top the anchor to this, which is written around the &lt;h1&gt; tag with the text &#8220;This is a basic HTML page with CSS Styling&#8221;. </p>
+</body>
+<!-- closes the body-->
+</html> 
+<!-- tells browser this is the end of an HTML document-->
