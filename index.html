@@ -1,44 +1,124 @@
-<!DOCTYPE html>
-<html lang="en"><head> 
-<!-- contains information such as title, meta information, CSS styles-->
-
+		<html>
+				<head>
+				
+		
+				
+	<html lang="en-US">
+	<meta property="og:site_name" content="Pablo Gutierrez-Gladwish Portfolio"/>
+	<meta property="og:image" content="previewimg.png">
+<meta name="keyword" content="Pablo, Gladwish, Pablo Gladwish, Gutierrez-Gladwish, Pablo Gutierrez-Gladwish, Pablo Gutierrez, design">
+<meta name="description" content="Online Portfolio for Pablo Gutierrez-Gladwish.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Tells the browser to display the page without any special scaling. -->
+				<meta charset="utf-8">
+				
+<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+ <script>function openNav1() {document.getElementById("mysidenav").style.width = "200px";
+}</script>
+<script>function closeNav1() {
+    document.getElementById("mysidenav").style.width = "0";
+}</script>
+ <script>function openNav(projnav) {
+    document.getElementById("projnav").style.width = "200px";
+}</script>
+<script>function closeNav(projnav) {
+    document.getElementById("projnav").style.width = "0";
+}</script>
 
-<meta name="description" content="A basic HTML web page">
-<!--this will be listed after the web page ink in search engine results-->
 
-<meta name="keywords" content="Basic HTML tags, chess in park, how to make coffee">
-<!--tells search engines what kind of content is on this page. this should be a short list of words separated by commas -->
+<meta property="og:image" content="images/POSTER-FLAMA-06.jpg" />
 
-<meta name="author" content="Your Name"><title>A Basic HTML Page</title>
-	<style>body
-		{width:80%;
-		margin:auto;
-		   font-family: "Times New Roman", Times, serif;
-			font-size:3em;
-			color:red;
-		cursor: url('cursor: url('http://www.gravatar.com/avatar/06ededb95f1c0b1f4f9d987e06d7d82b?s=32&d=identicon&r=PG'), pointer; '), pointer; }
-		h1{width:50%;
-		border:3px solid red; padding:20px; display:block; margin:auto;}
-		a{color:blue;
-			display:block;
-		text-decoration;none;}</style>
 	
-	
-	</head>
-<!--the slash indictates the close of a tag. Most, but not all tags need this for a following next tag to work.-->
+<title>Pablo-Gladwish</title>
+				</head>
+				
+				<body>
+				
+				<div id="header-fixed"><h1>Pablo</h1>
+		<h1 class="txtright right">Gutierrez-Gladwish</h1>
+				</div>
+				
+				<p id="CONTACT" onclick="openNav1(mysidenav)" onclick="openNav1(mysidenav)">CONTACT</p>
 
-<body> 
-	<h1>Gather round its time for crit</h1>
-	<a href="expanding-portfolio/index.html" target="_blank">Quintin</a>
-	<a href="" target="_blank">Christina</a>
-	<a href="" target="_blank">David</a>
-	<a href="" target="_blank">Julia</a>
-	<a href="" target="_blank">Marc</a>
-	<a href="http://www.michael-cheong.com" target="_blank">Michael</a>
-	<a href="" target="_blank">Lana</a>
-</body>
-<!-- closes the body-->
-</html> 
-<!-- tells browser this is the end of an HTML document-->
+				
+				<div id="mysidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1(mysidenav)">&times;</a>
+  <a href="mailto:pgutierr@risd.edu">pgutierr@risd.edu</a>
+  <a href="https://goo.gl/maps/8dTGGiuZq8s">2 college st #690<br>Providence RI</a>	
+  <a href="https://www.behance.net/pgutierr3fb9">Behance</a>
+	<a href="resume.pdf">Resume</a>
+   				</div>
+  				
+  				<p id="projects" onclick="openNav(projnav)">PROJECTS</P>
+  				<div id="projnav" class="sidenav">
+  				<a href="javascript:void(0)" class="closebtn" onclick="closeNav(projnav)">&times;</a>
+    <a href="meat.html">CULTURED MEAT</a>
+  	<a href="obj.html">Objects</a>
+  	<a href="fur.html">NOT FURREAL</a>
+    <a href="spam.html">SPAM</a>
+    <a href="book.html">19 ESSAYS</a>
+    <a href="specimen.html">Flama</a>
+     <a href="poster/untitled text 2.html">!!NEW POSTER!!</a>
+   				</div>
+				
+				<div id="content">
+				
+
+
+				<div class="tbl">
+    <span><a href="meat.html">Meat Culture</a></span>
+     <span><a href="specimen.html">Flama</a></span>
+    <span><a href="fur.html">Not Furreal</a></span>
+    <span><a href="spam.html">Spam</a></span>
+    <span><a href="book.html">19 <br>Essays</a></span>
+    <span><a href="obj.html">Objects</a></span>
+    
+</div>
+			    
+			
+				
+				<div class="cntr" id="home"><img class="work hand" src="images/meat-banner.png" id="imgClickAndChange" onclick="changeImage()" usemap="#SUB15" />
+				</div>
+				
+			
+			<span><a href="poster/untitled text 2.html">!!NEW POSTER!!</a></span>
+				</div>
+			
+
+
+
+	
+<script>
+
+var counter = 1;
+
+imgClickAndChange.onclick = function changeimage(){
+    if(counter == 0){
+        document.getElementById("imgClickAndChange").src = "images/meat-banner.png";
+        counter++;
+    }
+    else if(counter == 1){
+        document.getElementById("imgClickAndChange").src = "images/POSTER-FLAMA-06.jpg";
+        counter++;
+    }
+    else if(counter == 2){
+        document.getElementById("imgClickAndChange").src = "images/furrealicon.png";
+       counter++;
+    }
+     else if(counter == 3){
+        document.getElementById("imgClickAndChange").src = "images/kendra-3rdwk.png";
+       counter++;
+    }
+     else if(counter == 4){
+        document.getElementById("imgClickAndChange").src = "images/pofo - 47.jpg";
+        counter = 0;
+    }};
+</script>				
+  					
+
+
+
+
+
+
+	</body>
+</html>
