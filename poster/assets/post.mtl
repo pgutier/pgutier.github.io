@@ -1,0 +1,20 @@
+newmtl material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 2.000000
+d 1.000000
+Tr 0.000000
+map_Kd material - Default Texture0002.JPG 
+adobe_map_Normal material Normal Map 00002.JPG 
+
+newmtl material_0
+Ka 0.000000 0.000000 0.000000
+Kd 0.643137 0.698039 0.733333
+Ks 0.000000 0.000000 0.000000
+Ns 2.000000
+d 1.000000
+Tr 0.000000
+map_Kd material_0 - Default Texture0002.JPG 
+adobe_map_Normal material_0 Normal Map 00002.JPG 
+
