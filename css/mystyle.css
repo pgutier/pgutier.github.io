@@ -36,10 +36,10 @@ div::-webkit-scrollbar-thumb {
      border-width: 3px;
     border-style:solid; }
 
-#content{min-width: 900px;}
+#content{min-width: 600px;}
 	
 	body{
-        min-width: 900px;
+        min-width: 600px;
         background-color:white;
 	overflow-x:visible;
 	cursor:crosshair;}
@@ -90,12 +90,13 @@ div::-webkit-scrollbar-thumb {
     margin-left: 50px;
     padding:1px;}
     
-    .tbl { width:50%;
+    .tbl { width:70%;
     display:table;
-margin:auto;
+
 table-layout: fixed;
+        
 }
-	.tbl span {font-size:2.3%;
+	.tbl span {
     display:table-cell;
     text-align:center;
 }	
@@ -112,7 +113,7 @@ table-layout: fixed;
 	
 	.b{ font-family: ITCLubalin; font-weight: bold; font-size: 1.7em;}
 
-.main-title {font-size: .75em;}
+.main-title {font-size: .9em;}
 	
 	.cntr{margin:auto;}
 	
@@ -191,7 +192,7 @@ table-layout: fixed;
 	
 
 	
-	#content {width:77%; 
+	#content {width:77 %; 
 	position:absolute;
 	top:12vh;
 	margin-left:20%;}
