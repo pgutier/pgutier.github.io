@@ -36,7 +36,11 @@ div::-webkit-scrollbar-thumb {
      border-width: 3px;
     border-style:solid; }
 
-#content{min-width: 600px;}
+#content{min-width: 600px;
+width:77 %; 
+	position:absolute;
+	top:5vh;
+	margin-left:20%;}
 	
 	body{
         min-width: 600px;
@@ -63,7 +67,7 @@ div::-webkit-scrollbar-thumb {
 	transition: 0.5s;}
 	
 	#projnav{position:fixed;
-	top:28em;}
+	top:14em;}
 	  
     
     .sidenav a {
@@ -132,6 +136,8 @@ table-layout: fixed;
 	
 	.work { width:100%; height:auto;
 	}
+    
+.head {width: 74%; z-index:99999;}
 	
 	@font-face {font-family: ITCLubalin;
     src:url(LubalinGraphStd-Book.otf)}
@@ -157,7 +163,7 @@ table-layout: fixed;
     z-index:999;
     }
 .sectionbreak {width: 74%; color: blue; border-bottom: solid blue 1px;}
-    #projnav{height:300px; font-size: 12px;}
+    #projnav{height:300px; font-size: 1.5em;}
     
     #projects{transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -183,19 +189,11 @@ table-layout: fixed;
 	#home:hover{border:3px solid #0000ff; -webkit-transition-duration: .3s;  -webkit-transition-delay: 1s;
     transition-duration: .3s;  transition-delay: .1s; }
 	
-	#header-fixed { position:fixed; top:8px; width:74%;
-	background:none; z-index:99999; margin-left:10%; margin-right:10%; color:#000;}
 	
 	h1 {color:#0000ff;
-	font-family: 'ITCLubalin';  display:inline; text-align-last:right; margin:0; width:50%;
+	font-family: 'helvetica'; font-weight: normal;font-size:1.27em;  display:inline; text-align-last:right; margin:0; width:50%;
 	 background:none;}
 	
-
-	
-	#content {width:77 %; 
-	position:absolute;
-	top:12vh;
-	margin-left:20%;}
 	
 	#homebutton {
 	position:fixed;
