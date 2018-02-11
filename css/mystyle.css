@@ -68,7 +68,8 @@ width:77 %;
 	
 	#projnav{position:fixed;
 	top:14em;}
-	  
+    
+img {width:100%; height:auto;}
     
     .sidenav a {
     font-family:"ITCLubalin";
