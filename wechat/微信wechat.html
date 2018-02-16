@@ -1,0 +1,145 @@
+<!DOCTYPE html><html><head>
+
+    <title>微信 Wechat</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    ::-webkit-scrollbar { 
+    display: none; 
+}
+	.break{width:70vw; height:2px; background:blue; max-width: 490px;margin:2vw;}
+
+    body {background:#0000ff; overflow-x: hidden;
+        background-image: url("http://68.media.tumblr.com/19bf6b416cd3ffa6ae4b38eedba4d9a3/tumblr_ootmvpdPia1rjwiwxo1_1280.gif");
+    background-size: 35vw 35vw;
+    background-repeat: repeat-y;
+          background-position:right top;}
+    
+   @media only screen and (max-width: 600px) {
+    body {background:#0000ff; overflow-x: hidden;
+     background-image: url("http://68.media.tumblr.com/19bf6b416cd3ffa6ae4b38eedba4d9a3/tumblr_ootmvpdPia1rjwiwxo1_1280.gif");
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position:center bottom;}
+    #nav > a{ display:block;padding-top: 10px;}}
+} a:visited {color:#0000ff;}
+    #header {position:absolute; top:0; left:0.7em;z-index:999999;width:90%;}
+    #container {position:absolute; top:17vw; left:0em; width:80vw; padding:2vw;}
+    p{font-family:Arial, Helvetica, sans-serif; color:blue; max-width: 490px; padding:4vw;/*margin:auto;*/}
+    #nav > a{ font-family:Arial, Helvetica, sans-serif; color:blue; text-decoration:none;
+    font-family: Georgia,Times,Times New Roman,serif; font-weight: bold; padding-right:3vw;}
+    #nav{text-align:justify;
+    width:70vw; margin:auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-content: center;}
+    
+    @media screen and (max-width: 490px) and (min-width: 200px) {#nav {display:block;}}
+    
+    button {position:relative; left:3vw;
+    border:none;
+    border-radius:0px;
+    background:blue;
+    font-family:Arial, Helvetica, sans-serif; color:white;
+    margin:10px;}
+    
+    .parallax {
+    background-color:white;
+    /* Set a specific height */
+    height: 50vh; 
+    width:700px;
+    position:fixed;
+    top:10vw;
+    left:-5vw;
+    -ms-transform: rotate(-5deg); 
+    -webkit-transform: rotate(-5deg); 
+    transform: rotate(-5deg);
+overflow:none;}
+    
+    </style>
+   
+    </head>
+    <body>
+    <div class="parallax"></div>
+    <img id="header"src="微信-01.svg"/>
+    
+     <div id="container">
+     <div id="nav"><a href='avoidance.html'>Tools</a><a href='censored.html'>Keyword</a><a href='微信wechat.html'>WeChat-issues</a><a href='ref.html'>References</a></div>
+     
+     <!--<p data-text-original='无论是用中国手机号或者国际号码注册的微信用户都会受到关键词过滤系统的监管。
+
+关键词审查已经不再透明化。如果用户发出的信息被系统屏蔽，将不会再有提醒。
+
+系统更容易屏蔽群聊中的关键词，以免信息传播给更大的用户群体。
+
+会被屏蔽的关键词经常会变化：有一些之前没被屏蔽的也可能会被查。这主要与新发生的事件相关。
+
+微信的审查机制还会限制中国用户登陆各种赌博， 法轮功，及一些有政治言论的网站。然而，这些色情赌博网站可以通过注册国际账号来登陆。' 
+data-text-swap="Keyword censorship can be implemented in two ways: on the client-side (i.e., on the 
+application itself) or on the server side (i.e., on a remote server). In a client-side implementation, 
+all of the rules to perform censorship are inside of the application running on your device. Often the 
+application has a built-in list of keywords that it uses to perform checks to determine if any of these 
+keywords are present in your chat messages before your messages are sent. If your message contains a keyword
+ from the list then the message is not sent. In a server-side implementation the rules to perform censorship
+  are on a remote server. When a message is sent, it passes through the server that checks if banned keywords
+   are present and, if detected, blocks the message.<br><br>
+
+Keyword filtering on WeChat is only enabled for users with accounts registered to mainland China phone numbers, and persists even if these users later link the account to an International number.<br><br>
+
+Keyword censorship is no longer transparent. In the past, users received notification when their message was blocked; now censorship of chat messages happens without any user notice.<br><br>
+
+More keywords are blocked on group chat, where messages can reach a larger audience, than one-to-one chat.<br>
+
+Keyword censorship is dynamic. Some keywords that triggered censorship in our original tests were later found to be permissible in later tests.  Some newfound censored keywords appear to have been added in response to current news events.<br><br>
+
+WeChat’s internal browser blocks China-based accounts from accessing a range of websites including gambling, Falun Gong, and media that report critically on China. Websites that are blocked for China accounts were fully accessible for International accounts, but there is intermittent blocking of gambling and pornography websites on International accounts.<br><br>
+
+" >无论是用中国手机号或者国际号码注册的微信用户都会受到关键词过滤系统的监管。
+
+关键词审查已经不再透明化。如果用户发出的信息被系统屏蔽，将不会再有提醒。
+
+系统更容易屏蔽群聊中的关键词，以免信息传播给更大的用户群体。
+
+会被屏蔽的关键词经常会变化：有一些之前没被屏蔽的也可能会被查。这主要与新发生的事件相关。
+
+微信的审查机制还会限制中国用户登陆各种赌博， 法轮功，及一些有政治言论的网站。然而，这些色情赌博网站可以通过注册国际账号来登陆。</p>-->
+
+
+<p><b>How censorship in WeChat works</b><br>
+Keyword censorship can be implemented in two ways: on the client-side (i.e., on the 
+application itself) or on the server side (i.e., on a remote server). In a client-side implementation, 
+all of the rules to perform censorship are inside of the application running on your device. Often the 
+application has a built-in list of keywords that it uses to perform checks to determine if any of these 
+keywords are present in your chat messages before your messages are sent. If your message contains a keyword
+ from the list then the message is not sent. In a server-side implementation the rules to perform censorship
+  are on a remote server. When a message is sent, it passes through the server that checks if banned keywords
+   are present and, if detected, blocks the message.<br><br>
+
+Keyword filtering on WeChat is only enabled for users with accounts registered to mainland China phone numbers, and persists even if these users later link the account to an International number.<br><br>
+
+Keyword censorship is no longer transparent. In the past, users received notification when their message was blocked; now censorship of chat messages happens without any user notice.<br><br>
+
+More keywords are blocked on group chat, where messages can reach a larger audience, than one-to-one chat.<br>
+
+Keyword censorship is dynamic. Some keywords that triggered censorship in our original tests were later found to be permissible in later tests.  Some newfound censored keywords appear to have been added in response to current news events.<br><br>
+
+WeChat’s internal browser blocks China-based accounts from accessing a range of websites including gambling, Falun Gong, and media that report critically on China. Websites that are blocked for China accounts were fully accessible for International accounts, but there is intermittent blocking of gambling and pornography websites on International accounts.<br><br>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> </p>
+     
+     </div>
+    
+     
+    <!-- <script> var p = document.querySelectorAll("p")[0];
+p.addEventListener('click', function() {
+  if (p.getAttribute("data-text-swap") == p.innerHTML) {
+    p.innerHTML = p.getAttribute("data-text-original");
+  } else {
+    p.setAttribute("data-text-original", p.innerHTML);
+    p.innerHTML = p.getAttribute("data-text-swap");
+  }
+}, false);</script>-->
+    </body>

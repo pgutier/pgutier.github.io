@@ -37,7 +37,7 @@ div::-webkit-scrollbar-thumb {
     border-style:solid; }
 
 #content{min-width: 600px;
-width:77 %; 
+width:77%; 
 	position:absolute;
 	top:5vh;
 	margin-left:20%;}
@@ -48,12 +48,12 @@ width:77 %;
 	overflow-x:visible;
 	cursor:crosshair;}
 	
-	p {font-family: 'arial', sans-serif;
+	p {font-family: 'helvetica arial', sans-serif;
     color:#0000ff;
     line-height: 120%;}
     
 	#mysidenav{position:fixed;
-	top:90px;}
+	top:70px;}
 	
 	.sidenav {
   
@@ -67,15 +67,15 @@ width:77 %;
 	transition: 0.5s;}
 	
 	#projnav{position:fixed;
-	top:14em;}
+	top:12em;}
     
 img {width:100%; height:auto;}
     
     .sidenav a {
-    font-family:"ITCLubalin";
+    font-family:helvetica;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
     color: #0000ff;
     display: block;
     transition: 0.3s;
@@ -105,8 +105,9 @@ table-layout: fixed;
     display:table-cell;
     text-align:center;
 }	
+.cntr{margin: auto;}
 
-	.click {padding:1% 2% 1% 0%; width:74%;}
+	.click {padding:1% 2% 1% 0%; width:74%; }
 	
 	.rule {border-top:1px;border-bottom:0px;border-left:0px;border-right:0px; border-style:solid; border-color:#595959; padding-top:3px; margin-top: -5px;}
 	
@@ -118,7 +119,7 @@ table-layout: fixed;
 	
 	.b{ font-family: ITCLubalin; font-weight: bold; font-size: 1.7em;}
 
-.main-title {font-size: .9em;}
+.main-title {font-size: .9em; font-family:helvetica;}
 	
 	.cntr{margin:auto;}
 	
@@ -164,7 +165,7 @@ table-layout: fixed;
     z-index:999;
     }
 .sectionbreak {width: 74%; color: blue; border-bottom: solid blue 1px;}
-    #projnav{height:300px; font-size: 1.5em;}
+    #projnav{font-size: 1.5em;}
     
     #projects{transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -175,7 +176,7 @@ table-layout: fixed;
     z-index:999;
     }
     
-    a{text-decoration:none; font-family:"ITCLubalin"; color: #0000ff;}
+    a{text-decoration:none; color: #0000ff;}
     
     #contact:hover{text-decoration: underline;}
     
@@ -200,7 +201,7 @@ table-layout: fixed;
 	position:fixed;
     bottom:.7em;
     left:1em;
-  font-family: 'arial', sans-serif;
+  font-family: 'helvetica arial', sans-serif;
     height:18px;
     text-align:center;
     padding: 2px;
