@@ -6,8 +6,9 @@
 <meta name="description" content="Online Portfolio for Pablo Gutierrez-Gladwish.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<meta charset="utf-8">
-				
+			
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        
  <script>function openNav1() {document.getElementById("mysidenav").style.width = "200px";
 }</script>
 <script>function closeNav1() {
@@ -19,16 +20,15 @@
 <script>function closeNav(projnav) {
     document.getElementById("projnav").style.width = "0";
 }</script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 <title>Pablo-Gladwish</title>
 				</head>
 				
 				<body>
 				
-				<div  id="header-fixed"><h1>Pablo</h1>
-		<h1 class="txtright right">Gutierrez-Gladwish</h1>
-				</div>
+				
 				
 				<p id="CONTACT" onclick="openNav1(mysidenav)" onclick="openNav1(mysidenav)">CONTACT</p>
 
@@ -36,7 +36,6 @@
 				<div id="mysidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav1(mysidenav)">&times;</a>
   <a href="mailto:pgutierr@risd.edu">pgutierr@risd.edu</a>
-  <a href="https://goo.gl/maps/8dTGGiuZq8s">2 college st #690<br>Providence RI</a>
   <a href="https://www.behance.net/pgutierr3fb9">Behance</a>
    <a href="resume.pdf">Resume</a>
    				</div>
@@ -44,23 +43,29 @@
   				<p id="projects" onclick="openNav(projnav)">PROJECTS</p>
   				<div id="projnav" class="sidenav">
   				<a href="javascript:void(0)" class="closebtn" onclick="closeNav(projnav)">&times;</a>
-      <a href="meat.html">CULTURED MEAT</a>
+      <a href="meat.html">Cultured Meat</a>
    <a href="obj.html">Objects</a>
-  <a href="fur.html">NOT FURREAL</a>
-   <a href="spam.html">SPAM</a>
-    <a href="book.html">19 ESSAYS</a>
+  <a href="fur.html">Not Furreal</a>
+   <a href="spam.html">Spam</a>
+    <a href="book.html">19 Essays</a>
     <a href="specimen.html">Flama</a>
                     <a href="poster/untitled text 2.html">2D Poster</a>
 <a href="wechat.html">WeChat</a>
   
    				</div>
 				
-				<div id="content">	<p id="specimen" class="b">19 Essays on Graphic Design And Type</p>
+				<div id="content">
+                    <div class="head"><h1>Pablo</h1>
+		<h1 class="txtright right">Gutierrez-Gladwish</h1>
+				</div>
+                    <p id="specimen" class="b">19 Essays on Graphic Design And Type</p>
 				<div class="fltright">
 				
 				<div class="txt"><img class="work" src="images/pofo - 47.jpg"/></div>
 				<div class="txt"><p class="grey rule">Straightforward book created for my type two class.<br><br> 182 pages typeset in Akzidenz Grotesk and Adobe Garamond.<p/></div>
-				<div class="click bottom"><img class="work hand" src="images/pofo - 48.jpg" id="imgClick" onclick="changeImage()" usemap="#SUB15" />
+				<div class="click bottom"><img class="work hand"
+            data-toggle="tooltip"data-placement="bottom" title="click me"
+            src="images/pofo - 48.jpg" id="imgClick" onclick="changeImage()" usemap="#SUB15" />
 				</div>
 				
 				
@@ -116,7 +121,12 @@ imgClick.onclick = function changeimage(){
        counter=0;
     }};
 </script>				
-				
+	<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+			
 				
 				
 				</body>
