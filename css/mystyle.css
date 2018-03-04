@@ -138,6 +138,7 @@ table-layout: fixed;
 	
 	.work { width:100%; height:auto;
 	}
+.outline{border: 1px solid black;}
     
 .head {width: 74%; z-index:99999;}
 	
