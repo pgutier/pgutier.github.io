@@ -1,0 +1,183 @@
+<html>
+    
+<head><title>The Urban Forester</title>
+ 
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+
+   
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #maincontian {top: 0px;}
+    </style>
+</head>
+    
+    
+    
+    <body>
+     
+     <div id="maincontian">
+ <div id="headercontainer"> <div id="logotype"><h1>The Urban Forester <span class="secondarytxt"> Contracting</span></h1></div>
+    <div id="nav"> 
+  <ul> 
+        <a href="index.html"><li>About</li></a>
+      <a href="services.html"><li>Services</li></a>
+        <a href="contact.html"><li>Contact</li></a>
+        </ul>   </div> </div>
+        
+
+        
+    <div class="bodycontain">
+        <div class="pagedescr">Services</div>
+
+          <div class="service"><span class="title">Plumbing</span><br>	&#8212;<br>
+       Bathroom Remodel<br>
+       Shower and Bathtub Installation or Replacement<br>
+              Garbage Disposal Installation<br>
+Sink or Faucet Installation or Replacement<br>
+Toilet Installation or Replacement<br>
+Toilet Repair<br>
+    Home Remodeling<br>
+Kitchen Remodel<br>
+        </div>
+     <div class="service"><span class="title">Handyman</span><br>	&#8212;<br>
+         Closet and Shelving System Installation<br>
+
+        Dishwasher Installation<br>
+Door Installation<br>
+Drywall Installation and Hanging<br>
+
+         Fence Painting<br>
+
+
+         Garage Door Installation or Replacement<br>
+
+          Cabinet Installation<br> 
+       Cabinet Painting<br>
+         Window Installation<br>
+         Interior Painting<br>
+          Exterior Painting<br>
+        
+        
+       
+Lock Installation and Repair<br>
+
+        </div>    <div class="service"><span class="title">Minor Electrical</span>
+        <br>	&#8212;<br>
+       Appliance Installation<br>
+Electrical and Wiring Repair<br>
+
+
+
+
+
+
+
+
+
+</div>
+        <div class="service"><span class="title">Carpentry</span><br>	&#8212;<br>
+      Deck Staining and Sealing<br>
+Deck or Porch Remodel or Addition<br>
+Deck or Porch Repair<br>
+            Countertop Installation<br>
+Countertop Repair or Maintenance<br>
+     Framing Carpentry<br> 
+            Fence and Gate Installation<br>
+            General Carpentry<br>
+        </div>
+      
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        <div class="banner">   <div class="img"><img  src="20140403_162251.jpg"/> </div><div class="img"> <img  src="20140422_151028_Gulf.jpg"/></div></div>
+         
+         
+         </div>   
+    
+
+<div>
+<!--<div class="mySlides fade">
+  <div class="cptntext">Just the best!</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="cptntext">“I mean I guess hes ok?”</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="cptntext">Meh.</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<br>
+    </div >-->
+
+<footer>The Urban Forester |<i> San Antonio Texas | 2102793718</i></footer></div >
+    <script>
+    var element1 = document.querySelector("#pinned-element1");
+var element2 = document.querySelector("#pinned-element2");
+var element3 = document.querySelector("#pinned-element3");
+var element4 = document.querySelector("#pinned-element4");
+        var element5 = document.querySelector("#arrow");
+   function setTranslate(xPos, yPos, el) {
+    el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+}
+    window.addEventListener("DOMContentLoaded", scrollLoop, false);
+ 
+var xScrollPosition;
+var yScrollPosition;
+ 
+function scrollLoop() {
+    xScrollPosition = window.scrollX;
+    yScrollPosition = window.scrollY;
+    
+     setTranslate(0, yScrollPosition * -0.2, element2);
+    setTranslate(0, yScrollPosition * -.4, element3);
+    setTranslate(0, yScrollPosition * -.6, element4);
+ 
+    
+    requestAnimationFrame(scrollLoop);
+}
+    </script>
+
+
+    
+    
+    <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
