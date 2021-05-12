@@ -5,10 +5,11 @@
 	.break{width:70vw; height:2px; background:blue; max-width: 490px;margin:2vw;}
 
     body {background:#0000ff; overflow-x: hidden;
-        background-image: url("http://68.media.tumblr.com/19bf6b416cd3ffa6ae4b38eedba4d9a3/tumblr_ootmvpdPia1rjwiwxo1_1280.gif");
-    background-size: 25vw 25vw;
-    background-repeat: repeat;
-          background-position:right top; font-stretch: condensed;}
+        background-image: url("http://68.media.tumblr.com/19bf6b416cd3ffa6ae4b38eedba4d9a3/tumblr_ootmvpdPia1rjwiwxo1_1280.gif"), url('China-outline.svg');
+    background-size: 150px 150px,130vw;
+    background-repeat: repeat, no-repeat;
+        background-attachment:fixed , fixed;
+          background-position:left,center; font-stretch: condensed;}
 @keyframes slideInFromLeft {
   0% {
     
@@ -19,23 +20,36 @@
        opacity: 1;
   }
 }    
+@media only screen and (max-width: 775px){ body {background:#0000ff; overflow-x: hidden;
+     background-image:  url('China-outline.svg');
+    background-size: 200vw;
+    background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position:bottom, center;}
+}
+
 
    @media only screen and (max-width: 600px) {
     body {background:#0000ff; overflow-x: hidden;
-     background-image: url("http://68.media.tumblr.com/19bf6b416cd3ffa6ae4b38eedba4d9a3/tumblr_ootmvpdPia1rjwiwxo1_1280.gif");
-    background-size: 400px 400px;
+     background-image:  url('China-outline.svg');
+    background-size: 400vw;
     background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position:center bottom;}
+        background-position:bottom, center;}
     #nav > a{ display:block;padding-top: 10px;}
-       .parallax{left: 0px;}}
+       .parallax{left: 0px;}
+       #content{width:70%;}
+       #tabs {width:90vw; float: left;}
+      #containter { padding-top: 20px;}
+       #tabs a {padding: 5px; margin: 5px; float: left;}
+}
 
 a:visited {color:#0000ff;}
 
     #header { height: 80%; width: auto; padding: 10px}
 
-    #container {margin: auto; top:110px;position: relative;  width:50vw; padding:1vw; min-width: 460px; border: 1px solid blue;}
-  ul{font-family:Arial, Helvetica, sans-serif; font-stretch: color:blue; max-width: 490px; /*margin:auto;*/}
+    #container {margin: auto; top:170px;position: relative;  padding:1vw;  display: flex; justify-content: center; flex-wrap: wrap;  }
+  ul{font-family:Arial, Helvetica, sans-serif;  color:blue;  /*margin:auto;*/}
     p{font-family:Arial, Helvetica, sans-serif; color:blue; max-width: 490px; padding:4vw;/*margin:auto;*/}
     #nav > a{ font-family:Arial, Helvetica, sans-serif; color:white; text-decoration:none;
     font-family: Georgia,Times,Times New Roman,serif; font-weight: bold; padding-right:3vw;}
@@ -56,27 +70,22 @@ a:visited {color:#0000ff;}
     font-family:Arial, Helvetica, sans-serif; color:white;
     margin:10px;}
     
-    .parallax {
-    animation: 2s ease-in 0s 1 slideInFromLeft;
-  
-    /* Set a specific height */
-    height: auto; 
-    width:90vw;
-    position:fixed;
-    top:-170px;
-    left:100px;
-    
-
-        overflow:none;
-min-width: 1000px;}
+   
 
 img{width: 80%; height: auto;}
 #tabs {
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: -2px;
+  display: inline-block;
+   left: 50%;
+    transform: translate(-50%, 0);
+width: 50%; min-width: 300px;
+
+   justify-content: center;
+   margin-top: 100px;
+    position: fixed;
+    z-index: 99999999;
   padding: 0;
   list-style: none;
+    float: left
 }
 
 #tabs li {
@@ -87,13 +96,14 @@ img{width: 80%; height: auto;}
 #tabs a {
   position: relative;
   background: blue;
-   
   padding: .7em 1.4em;
   float: left;
   text-decoration: none;
   color: white;
-      outline: 1px white solid;
-  text-shadow: 0 1px 0 rgba(255,255,255,.8);
+     box-shadow: 0 0 0 1px white;
+    display: inline-block;
+  border-radius: 20px;
+    margin: 0px 14px 0px 14px;
   
 
 }
@@ -104,7 +114,9 @@ img{width: 80%; height: auto;}
 #tabs a:focus::after {
   background: white;
     color: blue;
-    outline: 1px blue solid;
+    box-shadow: 0 0 0 1px blue;
+    display: inline-block;
+  border-radius: 20px;
    
 }
 
@@ -133,11 +145,15 @@ img{width: 80%; height: auto;}
 
 #content {
  overflow: scroll;
-  padding: 0em 1em 1em 1em;
-  height: 500px;
-  position: relative;
+  padding: 1em 1em 1em 1em;
+ 
+    width: 50%;
+    min-width: 300px;
+  position:relative;
+    margin: 0;
   z-index: 2; 
-  
+    margin-top: 70px;
+  margin-bottom: 325px;
     border: 1px solid blue;
   
 }
@@ -145,10 +161,11 @@ img{width: 80%; height: auto;}
 #head{width: 100%; height: 90px;position:fixed; top:0; left:0;z-index:999999; color: red;}
 
 input[type=text] {
-  width: 100%;
+  width: 50vw;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+    border: none;
     font-size: 2em;
 }
 .marquee {
@@ -158,6 +175,6 @@ input[type=text] {
     background: black;
     color: rgb(202, 255, 195);
 }
-input{width: 102%; height: 90px; color:white; background: rgba(0, 0,255, 0.8); left: -10px;position: relative;}
+input{width:52vw; height: 90px; color:white; background: rgba(0, 0,255, 1); ;position: relative;border: none; text-align: center;}
 input, textarea, select, button { font-size:2.5em;}
     </style>
