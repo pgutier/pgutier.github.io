@@ -42,6 +42,7 @@
        #tabs {width:90vw; float: left;}
       #containter { padding-top: 20px;}
        #tabs a {padding: 5px; margin: 5px; float: left;}
+      }
 }
 
 a:visited {color:#0000ff;}
@@ -167,6 +168,7 @@ input[type=text] {
   box-sizing: border-box;
     border: none;
     font-size: 2em;
+    
 }
 .marquee {
     width: 300px;
@@ -175,6 +177,9 @@ input[type=text] {
     background: black;
     color: rgb(202, 255, 195);
 }
-input{width:52vw; height: 90px; color:white; background: rgba(0, 0,255, 1); ;position: relative;border: none; text-align: center;}
+input{width:52vw; height: 90px; color:white; background: rgba(0, 0,255, 1); ;position: relative;border: none; text-align: center;
+min-width: 330px;
+}
+
 input, textarea, select, button { font-size:2.5em;}
     </style>
