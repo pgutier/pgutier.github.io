@@ -2,16 +2,17 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>My first three.js app</title>
+		<title>My Desk</title>
 		<style>
 			body { margin: 0; }
 		</style>
 	</head>
-	<body>
-		<script src="three.min.js"></script>
-		<script>
+	<body><script src="js/GLTFLoader.js"></script>
+		<script src="js/three.min.js"></script>
+		<script >
+        
+           const loader = new GLTFLoader();;
             
-            import { GLTFLoader } from 'GLTFLoader.js';
 			const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -21,6 +22,7 @@ document.body.appendChild( renderer.domElement );
             
           // Instantiate a loader
 const loader = new GLTFLoader();
+            
 
 // Optional: Provide a DRACOLoader instance to decode compressed mesh data
 //const dracoLoader = new DRACOLoader();
@@ -30,7 +32,7 @@ const loader = new GLTFLoader();
 // Load a glTF resource
 loader.load(
 	// resource URL
-	'raw.glb',
+	'/assets/raw.glb',
 	// called when the resource is loaded
 	function ( gltf ) {
 
