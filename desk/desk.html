@@ -9,7 +9,7 @@
 	</head>
 	<body><script src="js/GLTFLoader.js"></script>
 		<script src="js/three.min.js"></script>
-		<script >
+		<script>
         
            const loader = new GLTFLoader();;
             
@@ -32,12 +32,11 @@ const loader = new GLTFLoader();
 // Load a glTF resource
 loader.load(
 	// resource URL
-	'/assets/raw.glb',
+	'assets/raw.glb',
 	// called when the resource is loaded
 	function ( gltf ) {
 
 		scene.add( gltf.scene );
-        renderer.outputEncoding = THREE.sRGBEncoding;
 
 		gltf.animations; // Array<THREE.AnimationClip>
 		gltf.scene; // THREE.Group
