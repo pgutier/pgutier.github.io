@@ -147,7 +147,7 @@ scene.add(backLight);
             var mtlLoader = new THREE.MTLLoader();
             mtlLoader.setBaseUrl('assets/');
             mtlLoader.setPath('assets/');
-            mtlLoader.load('desk.mtl', function (materials) {
+            mtlLoader.load('desk1.mtl', function (materials) {
 
                 materials.preload();
 
@@ -155,7 +155,7 @@ scene.add(backLight);
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('assets/');
-                objLoader.load('desk.obj', function (object) {
+                objLoader.load('desk1.obj', function (object) {
 
                     scene.add(object);
 
