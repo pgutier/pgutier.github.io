@@ -132,7 +132,7 @@
             keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
 keyLight.position.set(-100, 0, 100);
 
-fillLight = new THREE.DirectionalLight(new THREE.Color('hex(00ff72)'), 0.75);
+fillLight = new THREE.DirectionalLight(new THREE.Color('hex(00ff7)'), 0.75);
 fillLight.position.set(100, 0, 100);
 
 backLight = new THREE.DirectionalLight(0xffffff, 1.0);
@@ -147,7 +147,7 @@ scene.add(backLight);
             var mtlLoader = new THREE.MTLLoader();
             
             mtlLoader.setPath('assets/');
-            mtlLoader.load('desk.mtl', function (materials) {
+            mtlLoader.load('pos.mtl', function (materials) {
 
                 materials.preload();
 
@@ -247,7 +247,5 @@ scene.add(backLight);
 
 <div></div>
     
-    <script type="text/javascript">
-    alert("This project was made to question the traditional thought of interfacing with digital space as two dimensional (pages & tabs). Is the development of tools like virtual reality and webgl contributing to the return or early web vernacular as a way to express a reignitedd idealism surrounding digital spaces calling back to movements like technological utopians?                  THIS PAGE RUNS ON WEBGL PLEASE ENABLE FOR FULL EXPIRIENCE");
-</script>
+    
     </body></html>
