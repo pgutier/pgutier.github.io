@@ -1,0 +1,253 @@
+<!DOCTYPE html><html><head>
+
+    <title>2D—Web</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="three.js"></script>
+    <script src="Detector.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="OBJLoader.js"></script>
+    <script src="MTLLoader.js"></script>
+ <script>function openNav1() {document.getElementById("mysidenav").style.width = "350px";
+}</script>
+<script>function closeNav1() {
+    document.getElementById("mysidenav").style.width = "0";
+}</script>
+ 
+    <style>
+    
+    .sidenav {
+  
+    width: 0; 
+    position: fixed; 
+    z-index: 999;
+    right: 0;
+    bottom:0;
+    background-color: none;
+    overflow-x: hidden; 
+    padding-top: 30px; 
+	transition: 0.5s;}
+    p{color:#0000ff;
+     font-family: 'menlo';
+     font-weight:bold;
+     font-size:2em}
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            background: white;
+        cursor: pointer; }
+      /*div {   -webkit-transform: rotate(90deg); 
+    transform: rotate(90deg);}*/ 
+		#gif {position:absolute;
+		top:1em;
+		left:4em;
+		width:90%;}
+		
+			
+		
+		  .sidenav .closebtn {
+    position: absolute;
+    top: -5px;
+    left: -35px;
+    font-size: 20px;
+    margin-left: 50px;
+    padding:1px;}
+    
+    #contact{position:absolute;
+	bottom:-0.3em;
+    right:0.3em;
+   }
+   #dl{position:absolute;
+    bottom:-0.3em;
+    left:0.3em;
+   }
+   #ctrl{width:350px;
+   height:auto;
+   }
+    @font-face {
+    font-family: Menlo;monospaced
+    src: url(assets/Menlo-Regular.ttf);
+    }
+</style>
+
+</head>
+<body>
+	<a href="poster.pdf"><p id="dl">download</p></a><a>
+	<p id="contact" onclick="openNav1(mysidenav)">controls</p>
+</a><div id="mysidenav" class="sidenav"><a>
+ <img id="ctrl" src="assets/control.png"></a><a href="javascript:void(0)" class="closebtn" onclick="closeNav1(mysidenav)">×</a>
+   				</div>
+   <img id="gif" src="assets/coollogo_com-889597.gif">
+
+    <script>
+
+        if (!Detector.webgl) {
+            Detector.addGetWebGLMessage();
+        }
+
+        var container;
+
+        var camera, controls, scene, renderer;
+        var lighting, ambient, keyLight, fillLight, backLight;
+
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
+
+		
+        init();
+        animate();
+
+        function init() {
+
+            container = document.createElement('div');
+            document.body.appendChild(container);
+
+            /* Camera */
+
+            camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 9000);
+            camera.position.z = 3000;
+             /*camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+    camera.position.z = 1000;*/
+
+            /* Scene */
+
+            scene = new THREE.Scene();
+            lighting = false;
+
+            ambient = new THREE.AmbientLight(0xffffff, 1.0);
+            scene.add(ambient);
+
+            keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+            keyLight.position.set(-100, 0, 100);
+
+            fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
+            fillLight.position.set(100, 0, 100);
+
+            backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+            backLight.position.set(100, 0, -100).normalize();
+            
+            keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+keyLight.position.set(-100, 0, 100);
+
+fillLight = new THREE.DirectionalLight(new THREE.Color('hex(00ff72)'), 0.75);
+fillLight.position.set(100, 0, 100);
+
+backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+backLight.position.set(100, 0, -100).normalize();
+
+scene.add(keyLight);
+scene.add(fillLight);
+scene.add(backLight);
+
+            /* Model */
+
+            var mtlLoader = new THREE.MTLLoader();
+            
+            mtlLoader.setPath('assets/');
+            mtlLoader.load('desk.mtl', function (materials) {
+
+                materials.preload();
+
+
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials(materials);
+                objLoader.setPath('assets/');
+                objLoader.load('desk.obj', function (object) {
+
+                    scene.add(object);
+
+                });
+
+            });
+
+            /* Renderer */
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(new THREE.Color("hsl(0, 0%, 0%,)"));
+
+            container.appendChild(renderer.domElement);
+
+            /* Controls */
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.25;
+            controls.enableZoom = true;
+
+            /* Events */
+
+            window.addEventListener('resize', onWindowResize, false);
+            window.addEventListener('keydown', onKeyboardEvent, false);
+
+        }
+
+        function onWindowResize() {
+
+            windowHalfX = window.innerWidth / 2;
+            windowHalfY = window.innerHeight / 2;
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+        }
+
+        function onKeyboardEvent(e) {
+
+            if (e.code === 'KeyL') {
+
+                lighting = !lighting;
+
+                if (lighting) {
+
+                    ambient.intensity = 0.25;
+                    scene.add(keyLight);
+                    scene.add(fillLight);
+                    scene.add(backLight);
+
+                } else {
+
+                    ambient.intensity = 1.0;
+                    scene.remove(keyLight);
+                    scene.remove(fillLight);
+                    scene.remove(backLight);
+
+                }
+
+            }
+
+        }
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            controls.update();
+
+            render();
+
+        }
+        
+
+        function render() {
+
+            renderer.render(scene, camera);
+
+        }
+
+    </script>
+    
+
+
+<div></div>
+    
+    <script type="text/javascript">
+    alert("This project was made to question the traditional thought of interfacing with digital space as two dimensional (pages & tabs). Is the development of tools like virtual reality and webgl contributing to the return or early web vernacular as a way to express a reignitedd idealism surrounding digital spaces calling back to movements like technological utopians?                  THIS PAGE RUNS ON WEBGL PLEASE ENABLE FOR FULL EXPIRIENCE");
+</script>
+    </body></html>
