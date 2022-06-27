@@ -11,7 +11,7 @@ Ni 1.450000
 d 1.000000
 
 Tr 0.000000
-map_Kd Image_0.jpg
+map_Kd Material_0 - Image_0.jpg
 =======
 illum 2
 map_Bump .
