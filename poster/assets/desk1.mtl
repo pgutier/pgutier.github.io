@@ -9,6 +9,11 @@ Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
+<<<<<<< HEAD
+Tr 0.000000
+map_Kd Image_0.jpg
+=======
 illum 2
 map_Bump .
 map_Kd .
+>>>>>>> parent of 3384dbd (w/e)
