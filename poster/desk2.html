@@ -10,11 +10,7 @@
     <script src="OrbitControls.js"></script>
     <script src="OBJLoader.js"></script>
     <script src="MTLLoader.js"></script>
- <script>function openNav1() {document.getElementById("mysidenav").style.width = "350px";
-}</script>
-<script>function closeNav1() {
-    document.getElementById("mysidenav").style.width = "0";
-}</script>
+ 
  
     <style>
     
@@ -87,8 +83,8 @@
         var camera, controls, scene, renderer;
         var lighting, ambient, keyLight, fillLight, backLight;
 
-        var windowHalfX = window.innerWidth / 2;
-        var windowHalfY = window.innerHeight / 2;
+        var windowHalfX = window.innerWidth / 4;
+        var windowHalfY = window.innerHeight / 4;
 
 		
         init();
@@ -102,7 +98,7 @@
             /* Camera */
 
             camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 5, 15);
-            camera.position.z = 10;
+            camera.position.z = 20;
              /*camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
     camera.position.z = 1000;*/
 
@@ -172,7 +168,7 @@ scene.add(backLight);*/
             controls = new THREE.OrbitControls(camera, renderer.domElement);
             controls.enableDamping = true;
             controls.dampingFactor = 0.25;
-            controls.enableZoom = false;
+            controls.enableZoom = true;
 
             /* Events */
 
