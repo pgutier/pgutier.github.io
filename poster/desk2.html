@@ -97,7 +97,7 @@
 
             /* Camera */
 
-            camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 5, 150);
+            camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 50, 150);
             camera.position.z = 10;
              /*camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
     camera.position.z = 1000;*/
@@ -179,8 +179,8 @@ scene.add(backLight);*/
 
         function onWindowResize() {
 
-            windowHalfX = window.innerWidth / 20;
-            windowHalfY = window.innerHeight / 20;
+            windowHalfX = window.innerWidth / 15;
+            windowHalfY = window.innerHeight / 15;
 
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
